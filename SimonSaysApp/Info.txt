@@ -1,0 +1,21 @@
+Simsez Document - Evie Harpwood 13/11/2023
+
+My app has 2 screens, the main one being the one that appears on launch. It
+contains 2 labels, 4 coloured buttons and 2 other buttons (Play and High
+Scores). The game can be played by tapping the Play button or any of the
+coloured buttons. Doing so will cause Simon to go, showing the player which
+buttons to press next. This is indicated by a white square that appears around
+each button when pressed. Every time the player successfully copies Simon, it
+will go again and so on. During Simon’s turn, the player cannot press any of the
+coloured buttons.
+
+When the player successfully completes a pattern, their score will increase by
+the length of the pattern and a new one will be generated with 5 more items. If
+the player fails to repeat the pattern, their current score will be recorded if it is
+above 0 and a new pattern of the same length will be generated. The high
+scores table contains a maximum of 20 items so the score will only be added if
+there is space/it is greater than at least one of the values currently in the table.
+
+The high scores screen can be accessed via the High Scores button and can be
+dismissed by dragging down. It displays the 20 highest high scores and the
+date they were achieved in a tableView.

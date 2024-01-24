@@ -1,0 +1,20 @@
+NessVisitorApp Document - Evie Harpwood 11/12/2023
+
+The initial app view displays 3 main elements: 
+● A ‘toggle beds’ button in the top right that toggles whether annotations displaying the plant beds’ locations are visible in the map. 
+● A map centred on the user’s location showing the area around them. 
+● A table containing sections for each plant bed and rows for each plant. 
+
+It is worth noting that any plant beds with no plants are omitted from the annotations and the sections to reduce clutter on the user’s screen. 
+
+Any plants with an associated thumbnail image have that displayed in their cell, alongside a label displaying some details of the plant and a star icon. The star can be tapped to favourite or unfavourite a plant. This is indicated by the star becoming filled (favourite) or unfilled (not a favourite). 
+
+A row can be tapped to bring up another view with a scrollable display showing more detail about the plant, with any images associated with it underneath. If the plant has latitude and longitude values, a map showing the general area will be at the bottom with an annotation at the coordinate. 
+
+When the app is first loaded, data will be fetched from the web services and stored. Any consecutive times, data is fetched from the app’s core data. This means that the app will function without an internet connection provided it has been run once with, although images are not stored so they will not be displayed. The user’s favourites will also be preserved. 
+
+Limitations: 
+● It is possible to break the app by interacting with it while the data is being initially set up or when transitioning between views. 
+● I noticed that the top bed (closest to the user) upon launching was different between the app’s first launch and any subsequent ones. I believe they have the same distance so it may be the app resolving the equal distances differently. Showing empty beds supports that it is still calculating distance correctly (to do so, the filter on ‘sections’ in the ‘buildSectionInfo’ function can be removed, line 257 ViewController). 
+● There are also some beds whose annotations I couldn’t seem to locate on the map, which I am not sure about. 
+● If the plant data became out of date, the app would never update its core data it unless reinstalled.
